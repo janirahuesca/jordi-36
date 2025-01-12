@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fefae0;
+    color: #283618;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #bc6c25;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  main {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .pistes {
+    margin-top: 20px;
+  }
+  
+  .pista {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #bc6c25;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #a0561e;
+  }
+  
+  footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #bc6c25;
+    color: white;
+    text-align: center;
+  }
+  
+  #regals {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff3b0;
+    border: 2px solid #bc6c25;
+    border-radius: 10px;
+  }
+  
+  #regals ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #regals ul li {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  

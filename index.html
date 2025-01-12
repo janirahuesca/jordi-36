@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Els teus 36!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Feliç Aniversari, videta!</h1>
+  </header>
+  <main>
+    <p>Avui és un dia molt especial i tinc uns quants regals per a tu. Però hauràs de resoldre unes pistes per descobrir-los tots!</p>
+    
+    <!-- Botó per començar -->
+    <div id="començar">
+      <button id="btnComençar">Començar</button>
+    </div>
+
+    <div class="pistes" style="display:none;" id="pistes">
+      <!-- Pista 1: La postal -->
+      <div class="pista" id="pista1" style="display:none;">
+        <h2>Pista 1</h2>
+        <p>Quin regal et dono cada any, i que pots guardar per sempre com a record?</p>
+        <button onclick="revelarPista1()">Respondre</button>
+        <p id="resposta1" style="display:none;">Sí! És la teva postal personalitzada. Anem a la següent pista.</p>
+      </div>
+
+      <!-- Pista 2: El text de Pablo Arribas -->
+      <div class="pista" id="pista2" style="display:none;">
+        <h2>Pista 2</h2>
+        <p>Hi ha un autor que sempre t'inspira. És un text especial que cada any et dedico. Qui pot ser?</p>
+        <button onclick="revelarPista2()">Respondre</button>
+        <p id="resposta2" style="display:none;">Exacte! És un escrit de Pablo Arribas. Continuem amb la següent pista.</p>
+      </div>
+
+      <!-- Pista 3: El pastís -->
+      <div class="pista" id="pista3" style="display:none;">
+        <h2>Pista 3</h2>
+        <p>És dolç, fet amb molt d'amor, i el podràs compartir avui. Què creus que és?</p>
+        <button onclick="revelarPista3()">Respondre</button>
+        <p id="resposta3" style="display:none;">Correcte! És un pastís fet especialment per a tu.</p>
+      </div>
+
+      <!-- Pista 4: Les classes de guitarra -->
+      <div class="pista" id="pista4" style="display:none;">
+        <h2>Pista 4</h2>
+        <p>Quin instrument té sis cordes i es toca amb els dits?</p>
+        <button onclick="revelarRegals()">Respondre</button>
+        <p id="resposta4" style="display:none;">Sí! És la guitarra. I això ens porta a la sorpresa final.</p>
+      </div>
+    </div>
+
+    <!-- Secció final amb els regals -->
+    <div id="regals" style="display:none;">
+      <h2>Els teus regals 🎁</h2>
+      <ul>
+        <li>La teva postal personalitzada ✉️</li>
+        <li>Un escrit de Pablo Arribas que t'inspirarà 📝</li>
+        <li>Un pastís deliciós per celebrar junts 🎂</li>
+        <li>3 mesos de classes particulars de guitarra 🎸</li>
+      </ul>
+      <p>Espero que t'agradi tot. Feliç volta al sol! ❤️</p>
+    </div>
+  </main>
+  <footer>
+    <p>Amb tot el meu amor, Janira</p>
+    <p>09/02/2025</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
