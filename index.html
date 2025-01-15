@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Els teus 36!</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header>
     <h1>Feliç Aniversari, videta!</h1>
   </header>
   <main>
-    <p>Avui és un dia molt especial i tinc uns quants regals per a tu. Però hauràs de resoldre unes pistes per descobrir-los tots!</p>
-    
+    <p>Avui és un dia molt especial i tinc uns quants regals per a tu. Però hauràs de resoldre unes pistes per a
+      trobar-los tots!</p>
+
     <!-- Botó per començar -->
     <div id="començar">
       <button id="btnComençar">Començar</button>
@@ -22,34 +25,63 @@
       <!-- Pista 1: La postal -->
       <div class="pista" id="pista1" style="display:none;">
         <h2>Pista 1</h2>
-        <p>Quin regal et dono cada any, i que pots guardar per sempre com a record?</p>
-        <button onclick="revelarPista1()">Respondre</button>
-        <p id="resposta1" style="display:none;">Sí! És la teva postal personalitzada. Anem a la següent pista.</p>
+        <p>A casa els teus pares aquest tipus de detalls els guardaves a un "contenidor" en forma de _ _ _ _ _. Així que
+          aquí el trobaràs dins d'una d'aquestes, però no et diré a quina!</p>
+          <button onclick="revelarPista('resposta1', 'pista2')">Següent</button>
+        <p id="resposta1" style="display:none;">Com ja has vist, es tracta de la postal personalitzada que et dono cada
+          any, i que pots guardar per sempre com a record! Anem a la següent pista.</p>
       </div>
 
       <!-- Pista 2: El text de Pablo Arribas -->
       <div class="pista" id="pista2" style="display:none;">
         <h2>Pista 2</h2>
-        <p>Hi ha un autor que sempre t'inspira. És un text especial que cada any et dedico. Qui pot ser?</p>
-        <button onclick="revelarPista2()">Respondre</button>
-        <p id="resposta2" style="display:none;">Exacte! És un escrit de Pablo Arribas. Continuem amb la següent pista.</p>
+        <p>Aquest detall va de texts... així que busca en aquell lloc de la casa on més texts es poden trobar.</p>
+        <button onclick="revelarPista('resposta2', 'pista3')">Següent</button>
+        <p id="resposta2" style="display:none;">Exacte! És un escrit de l'escriptor Pablo Arribas (sé que mai recordaràs
+          el seu nom, però cada any hi busco un escrit seu que m'inspiri, relacionat amb l'any viscut). Continuem amb la
+          següent pista.
+        </p>
       </div>
 
-      <!-- Pista 3: El pastís -->
+      <!-- Pista 3: Complements de Bola de Drac per la nova habitació -->
       <div class="pista" id="pista3" style="display:none;">
         <h2>Pista 3</h2>
-        <p>És dolç, fet amb molt d'amor, i el podràs compartir avui. Què creus que és?</p>
-        <button onclick="revelarPista3()">Respondre</button>
-        <p id="resposta3" style="display:none;">Correcte! És un pastís fet especialment per a tu.</p>
+        <p>Aquí va un que al teu nen interior li agradarà, però que el trobaràs on el teu jo adult hi passa moltes hores
+          al dia.</p>
+          <button onclick="revelarPista('resposta3', 'pista4')">Següent</button>
+        <p id="resposta3" style="display:none;">L'has trobat, i segur que t'ha fet gràcia i demà els hi ensenyaràs als
+          compis de feina! Presumint per fi d'habitació nova!</p>
       </div>
 
       <!-- Pista 4: Les classes de guitarra -->
       <div class="pista" id="pista4" style="display:none;">
         <h2>Pista 4</h2>
-        <p>Quin instrument té sis cordes i es toca amb els dits?</p>
-        <button onclick="revelarRegals()">Respondre</button>
-        <p id="resposta4" style="display:none;">Sí! És la guitarra. I això ens porta a la sorpresa final.</p>
+        <p>Si vols trobar en què consisteix el següent regal, només et diré que el trobaràs a la música.</p>
+        <button onclick="revelarPista('resposta4', 'pista5')">Següent</button>
+        <p id="resposta4" style="display:none;">Espero que gaudeixis d'aquestes primeres classes i, que t'agradin tant,
+          que volguis continuar!</p>
       </div>
+    </div>
+
+    <!-- Pista 5: El clauer de la Lola -->
+    <div class="pista" id="pista5" style="display:none;">
+      <h2>Pista 5</h2>
+      <p>Aquest regal és el més especial de tots, així que està sota custòdia de la millor protectora que has tingut
+        mai. </p>
+        <button onclick="revelarPista('resposta5', 'pista6')">Següent</button>
+      <p id="resposta5" style="display:none;">Aquest clauer és tan especial, que crec que em veuré obligada a comprar-ne
+        un per mi... Lola, sempre als nostres cors!</p>
+    </div>
+    </div>
+
+    <!-- Pista 6: El pastís -->
+    <div class="pista" id="pista6" style="display:none;">
+      <h2>Pista 6</h2>
+      <p>Per últim, i per acabar amb bon sabor de boca, busca a aquell lloc que t'agrada tant obrir i contemplar el seu
+        interior.</p>
+      <button onclick="revelarRegals()">Següent</button>
+      <p id="resposta6" style="display:none;">Correcte! És un pastís fet especialment per a tu, que ens menjarem d'aquí
+        una estona.</p>
     </div>
 
     <!-- Secció final amb els regals -->
@@ -58,8 +90,11 @@
       <ul>
         <li>La teva postal personalitzada ✉️</li>
         <li>Un escrit de Pablo Arribas que t'inspirarà 📝</li>
-        <li>Un pastís deliciós per celebrar junts 🎂</li>
+        <li>Complements de Bola de Drac per l'escriptori de la teva nova cova 🐉</li>
         <li>3 mesos de classes particulars de guitarra 🎸</li>
+        <li>Un clauer fet artesanalment amb una imatge de la Lola 🐾</li>
+        <li>Un pastís deliciós per celebrar junts 🎂</li>
+        <li>I qui sap... potser alguna sopreseta més 🤫</li>
       </ul>
       <p>Espero que t'agradi tot. Feliç volta al sol! ❤️</p>
     </div>
@@ -70,4 +105,5 @@
   </footer>
   <script src="script.js"></script>
 </body>
+
 </html>
