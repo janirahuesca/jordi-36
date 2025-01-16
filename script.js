@@ -1,6 +1,9 @@
 document.getElementById('btnComencar').addEventListener('click', () => {
-  document.getElementById('comencar').style.display = 'none';
-  document.getElementById('pistes').style.display = 'block';
+  document.getElementById('intro').style.display = 'none';
+  
+  const pistes = document.getElementById('pistes');
+  pistes.style.display = 'block';
+  
   mostrarPista('pista1');
 });
 
@@ -8,14 +11,28 @@ function mostrarPista(id) {
   document.querySelectorAll('.pista').forEach(pista => {
     pista.style.display = 'none';
   });
-  document.getElementById(id).style.display = 'block';
+  
+  const pista = document.getElementById(id);
+  if (pista) {
+    pista.style.display = 'block';
+  }
 }
 
 function revelarParagraf(paragrafId) {
-  document.getElementById(paragrafId).style.display = 'block';
+  const paragraf = document.getElementById(paragrafId);
+  if (paragraf) {
+    paragraf.style.display = 'block';
+  }
 }
 
 function revelarRegals() {
-  document.querySelector('.pistes').style.display = 'none';
-  document.getElementById('regals').style.display = 'block';
+  const pistes = document.querySelector('.pistes');
+  if (pistes) {
+    pistes.style.display = 'none';
+  }
+  
+  const regals = document.getElementById('regals');
+  if (regals) {
+    regals.style.display = 'block';
+  }
 }

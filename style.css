@@ -1,4 +1,3 @@
-/* Reset i configuració bàsica */
 * {
   margin: 0;
   padding: 0;
@@ -10,14 +9,21 @@ body {
   background: linear-gradient(135deg, #fefae0, #e3d5ca);
   color: #283618;
   margin: 0;
-  padding: 0;
+  padding-top: 80px; 
+  padding-bottom: 50px; 
+  text-align: center;
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #bc6c25;
   color: white;
   padding: 20px;
   text-align: center;
+  z-index: 10;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -51,12 +57,10 @@ header {
   text-align: left;
 }
 
-/* Estil del segon paràgraf (en cursiva) */
 .pista p:nth-of-type(2) {
   font-style: italic;
 }
 
-/* Botons */
 button {
   background-color: #bc6c25;
   color: white;
@@ -78,7 +82,6 @@ button:active {
   background-color: #8a4419;
 }
 
-/* Estil pels regals */
 #regals {
   margin-top: 30px;
   padding: 20px;
@@ -100,17 +103,19 @@ button:active {
   font-size: 18px;
 }
 
-/* Peus de pàgina */
 footer {
-  margin-top: 20px;
-  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background-color: #bc6c25;
   color: white;
   text-align: center;
+  padding: 10px;
+  z-index: 10;
   box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Efectes visuals i millor visibilitat */
 #pistes h2 {
   color: #bc6c25;
 }
